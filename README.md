@@ -4,6 +4,7 @@ This is a ros2 repository for the K3 Pro Non-Contact Auto Infrared Forehead Ther
 ## Dependencies
 
 [RoMi-Health Messages](https://github.com/sharp-rmf/romi_health_msgs.git) 
+
 For this ROS2 Wrapper, the temperature reading is published as part of the VSM message of RoMi-Health standardised messages. Therefore, the above repo is needed for this repo to work.
 
 ## Usage Instructions
