@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'temperature_reader_script = k3_thermometer_ros2.temperature_reader_script:main',
+            'temperature_sql_connector = sql_connector.sql_connector_node:main'
         ],
     },
 )
