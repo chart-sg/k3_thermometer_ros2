@@ -17,7 +17,7 @@ class sql_connector_node(Node):
                                             10)
         self.cnx = mysql.connector.connect(host='localhost',
                                       user='root',
-                                      password='chart123', 
+                                      password='****', 
                                       database='Medical_Device',
                                       port=3306,
                                       auth_plugin='mysql_native_password')
