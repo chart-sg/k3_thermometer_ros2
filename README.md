@@ -3,7 +3,7 @@ This is a ros2 adapter for the K3 Pro Non-Contact Auto Infrared Forehead Thermom
 
 ## Pre-requisites
 The following are packages/messages required by the adapter
-- [RoMi-Health Messages](https://github.com/sharp-rmf/romi_health_msgs.git) 
+- [RoMi-Health Messages]
 
 This package has been tested to be working on:
 - Ubuntu 20.04
@@ -26,6 +26,5 @@ ros2 run k3_thermometer_ros2 temperature_reader_script
 
 
 [CHART]: <https://www.cgh.com.sg/CHART>
-[RoMi-H Messages]: https://github.com/sharp-rmf/romi_health_msgs
-[romi_health_msgs.msg]: https://github.com/sharp-rmf/romi_health_msgs
+[RoMi-Health Messages]: https://github.com/sharp-rmf/romi_health_msgs
 [ROS2 Galactic]: <https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html>
