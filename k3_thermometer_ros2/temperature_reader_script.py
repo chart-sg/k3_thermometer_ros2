@@ -21,7 +21,6 @@ class TemperatureAdapter(Node):
         ser.timeout = 0
         self.key = 'ambience compensate\r\nT body = '
         self.key_len = len(self.key)
-        self.temp_db_url = '' ## <REST API get URL>
 
         try:
             self.initialise(ser)
@@ -53,10 +52,6 @@ class TemperatureAdapter(Node):
                         byte_temp = data[body_temp_index + self.key_len : body_temp_index + self.key_len + 6] 
                         temp_full = float(byte_temp.decode())
                         temp = round(temp_full, 1)
-
-                        ## Here the user can choose to upload the temperature 
-                        ## through REST APIs or as a ROS2 topic  
-                        # self.upload(temp)
                         self.ros_pub(temp)
 
                 time.sleep(1)
@@ -66,18 +61,6 @@ class TemperatureAdapter(Node):
             except KeyboardInterrupt:
                 print("Keyboard Interrupt registered.")
                 break
-
-    def upload(self, temp):
-        ## This is a REST get function to upload the temperature readings
-        try:
-            print("Uploading Recorded Temperature, Please Hold ...")
-            msg = str(temp)
-            print(msg)
-            response = requests.get(self.temp_db_url + str(temp))
-                   
-        except Exception as e:
-            print(e)
-            return
  
     def ros_pub(self, temp):
         ## This is ROS2 publishing function to publish the temperature readings as part of the RoMi-H VSM message
